@@ -1348,6 +1348,324 @@ img {
     color: var(--accent);
 }
 
+/* SKILLS PAGE */
+
+.skills-page-heading {
+    padding: 75px 0 55px;
+}
+
+.skills-page-heading h1 {
+    font-size: clamp(60px, 8vw, 110px);
+    line-height: .92;
+    letter-spacing: -6px;
+}
+
+.skills-page-heading h1 span {
+    color: var(--accent);
+}
+
+.skills-page-heading > p:last-child {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.skill-record-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.skill-record {
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 22px;
+    transition: .3s;
+}
+
+.skill-record:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(106, 168, 255, .07);
+}
+
+.skill-record-top {
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.skill-record h2 {
+    font-size: 38px;
+    margin-top: 35px;
+}
+
+.skill-record p {
+    min-height: 70px;
+    color: var(--muted);
+    font-size: 12px;
+    margin: 8px 0 18px;
+}
+
+.skill-progress {
+    height: 2px;
+    background: var(--line);
+    margin-top: auto;
+}
+
+.skill-progress span {
+    display: block;
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.skill-status {
+    color: var(--accent);
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+.skills-page-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    color: var(--accent);
+    font-size: 9px;
+    padding: 18px 0;
+    margin: -35px 0 55px;
+}
+
+.tool-stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    border-top: 1px solid var(--line);
+    margin-top: 90px;
+    padding-top: 45px;
+}
+
+.tool-stack-heading h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: .95;
+    letter-spacing: -4px;
+}
+
+.tool-stack-heading h2 span {
+    color: var(--accent);
+}
+
+.tool-stack-list {
+    border-top: 1px solid var(--line);
+}
+
+.tool-stack-list div {
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 45px 1fr auto;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+}
+
+.tool-stack-list div > span {
+    color: var(--accent);
+    font-size: 9px;
+}
+
+.tool-stack-list strong {
+    font-size: 13px;
+}
+
+.tool-stack-list small {
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.skills-learning-next {
+    margin-top: 70px;
+}
+
+/* CONTACT PAGE */
+
+.contact-page {
+    min-height: calc(100vh - 75px);
+}
+
+.back-link {
+    font-size: 9px;
+    color: var(--muted);
+    transition: .3s;
+}
+
+.back-link:hover {
+    color: var(--accent);
+}
+
+.contact-page-layout {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 55px;
+    padding: 75px 0;
+}
+
+.contact-page-main h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: .92;
+    letter-spacing: -6px;
+}
+
+.contact-page-main h1 span {
+    color: var(--accent);
+}
+
+.contact-page-copy {
+    max-width: 550px;
+    color: var(--muted);
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.contact-page-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.contact-page-socials a {
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 18px;
+    transition: .3s;
+}
+
+.contact-page-socials a:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.contact-page-socials a span {
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.contact-page-socials a strong {
+    font-size: 15px;
+}
+
+.contact-form {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 28px;
+    box-shadow: 0 0 40px rgba(106, 168, 255, .08);
+}
+
+.form-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 9px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+}
+
+.contact-form label {
+    display: block;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+}
+
+.contact-form label span {
+    display: block;
+    color: var(--muted);
+    font-size: 8px;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 14px;
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #59636d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: inset 0 -1px var(--accent);
+}
+
+.form-submit {
+    width: 100%;
+    min-height: 55px;
+    border: 1px solid var(--accent);
+    background: transparent;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    margin-top: 22px;
+    font: 9px var(--mono);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-submit:hover {
+    background: var(--accent);
+    color: var(--bg);
+    box-shadow: 0 0 25px rgba(106, 168, 255, .25);
+}
+
+.contact-page-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+}
+
+.contact-page-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-right: 1px solid var(--line);
+    padding: 20px;
+}
+
+.contact-page-meta div:last-child {
+    border-right: 0;
+}
+
+.contact-page-meta span {
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.contact-page-meta strong {
+    font-size: 9px;
+}
+
 /* FOOTER */
 
 .footer {
@@ -1765,6 +2083,44 @@ img {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    .skill-record-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-page-heading h1 {
+        font-size: 58px;
+        letter-spacing: -4px;
+    }
+
+    .contact-page-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 55px 0;
+    }
+
+    .contact-page-main h1 {
+        font-size: 58px;
+        letter-spacing: -4px;
+    }
+
+    .contact-page-socials,
+    .contact-page-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page-meta div {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .contact-page-meta div:last-child {
+        border-bottom: 0;
     }
 }
 
