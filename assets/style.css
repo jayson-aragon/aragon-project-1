@@ -17,7 +17,7 @@
     --mono: "DM Mono", monospace;
 }
 
-:root[data-theme="light"] {
+body:has(.theme-toggle-input:checked) {
     --bg: #eef2f7;
     --surface: #f8fafc;
     --surface-2: #e5ebf2;
@@ -231,6 +231,12 @@ img {
     gap: 14px;
 }
 
+.theme-toggle-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .theme-toggle {
     min-height: 34px;
     display: inline-flex;
@@ -259,16 +265,31 @@ img {
     font-size: 8px;
 }
 
-:root[data-theme="light"] .navigation,
-:root[data-theme="light"] .footer {
+.theme-icon-light,
+.theme-text-light {
+    display: none;
+}
+
+body:has(.theme-toggle-input:checked) .theme-icon-dark,
+body:has(.theme-toggle-input:checked) .theme-text-dark {
+    display: none;
+}
+
+body:has(.theme-toggle-input:checked) .theme-icon-light,
+body:has(.theme-toggle-input:checked) .theme-text-light {
+    display: inline;
+}
+
+body:has(.theme-toggle-input:checked) .navigation,
+body:has(.theme-toggle-input:checked) .footer {
     background: rgba(238, 242, 247, .92);
 }
 
-:root[data-theme="light"] .noise {
+body:has(.theme-toggle-input:checked) .noise {
     opacity: .012;
 }
 
-:root[data-theme="light"] .marquee {
+body:has(.theme-toggle-input:checked) .marquee {
     background: var(--accent);
     color: #fff;
 }
