@@ -236,7 +236,9 @@ img {
 }
 
 .hero-title-wrap {
-    margin-top: 90px;
+    max-width: 1120px;
+    margin: 90px auto 0;
+    text-align: center;
 }
 
 .hero-overline {
@@ -255,7 +257,7 @@ img {
 
 .hero h1 .surname {
     display: block;
-    padding-left: 12%;
+    padding-left: 0;
     color: #737d86;
 }
 
@@ -264,11 +266,13 @@ img {
 }
 
 .hero-bottom-line {
+    max-width: 760px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-top: 45px;
-    padding-left: 12%;
+    margin: 45px auto 0;
+    padding-left: 0;
+    text-align: left;
 }
 
 .hero-description {
@@ -286,7 +290,7 @@ img {
     gap: 12px;
     font: 9px var(--mono);
     letter-spacing: 1px;
-    margin-right: 7%;
+    margin-right: 0;
     transition: .3s;
 }
 
@@ -316,10 +320,11 @@ img {
 /* IDENTITY VISUAL */
 
 .identity-layout {
+    max-width: 1120px;
     display: grid;
-    grid-template-columns: 1.3fr .7fr;
+    grid-template-columns: 1fr 1fr;
     gap: 18px;
-    margin-top: 85px;
+    margin: 85px auto 0;
 }
 
 .identity-image {
