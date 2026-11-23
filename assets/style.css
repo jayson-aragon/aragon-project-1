@@ -65,19 +65,23 @@ img {
     filter: blur(150px);
     pointer-events: none;
     z-index: -2;
-    opacity: .09;
+    opacity: .12;
+    animation: ambient-drift 10s ease-in-out infinite alternate;
 }
 
 .ambient-a {
     background: var(--accent);
     top: 10%;
     left: -250px;
+    box-shadow: 0 0 220px var(--accent);
 }
 
 .ambient-b {
     background: var(--blue);
     bottom: 5%;
     right: -250px;
+    animation-delay: -5s;
+    box-shadow: 0 0 220px var(--blue);
 }
 
 .noise {
@@ -300,6 +304,7 @@ img {
     color: var(--accent);
     font-size: 20px;
     transition: .3s;
+    box-shadow: 0 0 18px rgba(106, 168, 255, .25);
 }
 
 .explore-link:hover .explore-circle {
@@ -327,8 +332,9 @@ img {
 .identity-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 50% 18%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    background: #171e24;
     filter: grayscale(100%);
     transition: .8s;
 }
@@ -361,6 +367,7 @@ img {
     padding: 20px 30px;
     border: 1px solid var(--line);
     background: var(--surface);
+    box-shadow: inset 0 0 60px rgba(106, 168, 255, .025), 0 0 35px rgba(106, 168, 255, .08);
 }
 
 .vertical-label {
@@ -410,6 +417,37 @@ img {
     font-size: 12px;
     color: var(--muted);
     margin-top: 5px;
+}
+
+.profile-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.profile-badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 25px;
+    border: 1px solid var(--line);
+    padding: 5px 8px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.profile-badges span:first-child {
+    color: var(--accent);
+    border-color: rgba(106, 168, 255, .35);
+}
+
+.profile-badges i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 9px var(--accent);
 }
 
 .identity-divider {
@@ -580,6 +618,34 @@ img {
 .fact strong {
     font-size: 12px;
     font-weight: 500;
+}
+
+.academic-focus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.academic-focus div {
+    min-height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid var(--line);
+    background: rgba(106, 168, 255, .025);
+    padding: 16px;
+}
+
+.academic-focus span {
+    color: var(--muted);
+    font-size: 8px;
+}
+
+.academic-focus strong {
+    color: var(--accent);
+    font-size: 9px;
+    line-height: 1.6;
 }
 
 /* SKILLS */
@@ -1218,6 +1284,7 @@ img {
     padding: 20px 0;
     font-size: 16px;
     transition: .3s;
+    text-shadow: 0 0 18px rgba(106, 168, 255, .2);
 }
 
 .contact-cta:hover {
@@ -1305,6 +1372,15 @@ img {
 }
 
 /* ANIMATIONS */
+
+@keyframes ambient-drift {
+    from {
+        transform: translate3d(-20px, -10px, 0) scale(.95);
+    }
+    to {
+        transform: translate3d(35px, 25px, 0) scale(1.08);
+    }
+}
 
 @keyframes marquee {
     from {
@@ -1477,7 +1553,8 @@ img {
     }
 
     .identity-image img {
-        object-position: 50% 20%;
+        object-fit: contain;
+        object-position: 50% 50%;
     }
 
     .identity-side {
@@ -1723,7 +1800,8 @@ img {
         font-size: 52px;
     }
 
-    .about-facts {
+    .about-facts,
+    .academic-focus {
         grid-template-columns: 1fr;
     }
 
