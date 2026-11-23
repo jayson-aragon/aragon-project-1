@@ -17,6 +17,17 @@
     --mono: "DM Mono", monospace;
 }
 
+:root[data-theme="light"] {
+    --bg: #eef2f7;
+    --surface: #f8fafc;
+    --surface-2: #e5ebf2;
+    --white: #151a20;
+    --muted: #66727f;
+    --line: #cbd4df;
+    --accent: #326fc4;
+    --blue: #326fc4;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -210,6 +221,56 @@ img {
     font: 10px var(--mono);
     color: var(--accent);
     margin-right: 15px;
+}
+
+/* THEME TOGGLE */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.theme-toggle {
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--white);
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.theme-icon {
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.theme-text {
+    font-size: 8px;
+}
+
+:root[data-theme="light"] .navigation,
+:root[data-theme="light"] .footer {
+    background: rgba(238, 242, 247, .92);
+}
+
+:root[data-theme="light"] .noise {
+    opacity: .012;
+}
+
+:root[data-theme="light"] .marquee {
+    background: var(--accent);
+    color: #fff;
 }
 
 /* HERO */
